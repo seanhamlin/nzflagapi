@@ -2,9 +2,13 @@
 
 So I wanted to write an application that used the data from the NZ Govt to form my own voting application. It is only currently available in HTML format, so I thought I would fix that. The API is currently a flat JSON file, with as much information as I could extract from the govt.nz website.
 
-## Scrape it
+## JSON file
 
-CasperJS is used to scrape the data from the website, luckily the data is fairly semantic on the website, so this was not a challenge.
+The JSON file with all the flag data can found in the API folder. It is around 3 MB. Good times.
+
+## Want to scrape it yourself
+
+CasperJS is used to scrape the data from the website, luckily the data is fairly well structured on the website, so this was not a challenge.
 
 ### Installation of the scraper
 
@@ -34,7 +38,7 @@ From anywhere (as these should now be on your path).
 casperjs flag-collect.js
 ```
 
-It takes a while to download the 10,293 flags so be patient. There is a check to no download the flag if a file is already there with the same name.
+It takes a while to page through the 172 pages, so be patient. I removed the image download process, as this resulted in 1 GB of flags being downloaded (the code to do this is just commented out, so it is easy to download them if you want).
 
 ## Licence
 
